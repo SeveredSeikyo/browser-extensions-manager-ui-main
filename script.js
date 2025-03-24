@@ -41,7 +41,7 @@ function renderList(filteredData) {
         itemDiv.classList.add("item-div");
         itemDiv.innerHTML=`
             <div class="item-inner-top-div">
-                <img src=${item.logo} alt=${item.name}/>
+                <img src=${item.logo} alt="${item.name}"/>
                 <div class="item-text-div">
                     <h2>${item.name}</h2>
                     <p>${item.description}</p>
