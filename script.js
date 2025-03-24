@@ -51,8 +51,8 @@ function renderList(filteredData) {
                 <button class="remove-btn" type="button">
                     Remove
                 </button>
-                <label class="switch" for="${item.name}">
-                    <input type="checkbox" id="${item.name}" aria-label="Toggle dark mode"/>
+                <label class="switch">
+                    <input type="checkbox" aria-label="Toggle dark mode"/>
                     <span class="${item.isActive?"slider-active":"slider-inactive"} round"></span>
                 </label>
             </div>
