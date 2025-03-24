@@ -51,8 +51,8 @@ function renderList(filteredData) {
                 <button class="remove-btn" type="button">
                     Remove
                 </button>
-                <label class="switch">
-                    <input type="checkbox"/>
+                <label class="switch" for="${item.name}">
+                    <input type="checkbox" id="${item.name}"/>
                     <span class="${item.isActive?"slider-active":"slider-inactive"} round"></span>
                 </label>
             </div>
