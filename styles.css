@@ -163,14 +163,19 @@
     margin: 0;
 }
 
+.item-text-div h2{
+    font-size: 16px;
+}
+
 .item-text-div p{
     color: rgb(177, 175, 175);
+    font-size: 14px;
 }
 
 .item-inner-top-div{
     display: flex;
-    justify-content: center;
-    align-items:center;
+    justify-content: space-between;
+    align-items: start;
     gap: 10px;
 }
 
@@ -251,7 +256,8 @@
 }
 
 .item-div{
-    max-width: 280px;
+    max-width: 320px;
+    height: 160px;
     margin: 5px;
     margin-bottom: 5px;
     background-color: #1f2535;
