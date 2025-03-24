@@ -16,39 +16,36 @@
   </style>
 </head>
 <body class="container-dark" id="body">
-  <!-- navbar -->
-  <nav class="toggle-nav">
-    <img src="./assets/images/logo.svg" alt="logo" class="icon-img"/>
-    <button class="toggle-button" id="toggleBtn">
-      <img src="./assets/images/icon-sun.svg" alt="icon-sun" id="toggleImg" data-theme="light"/>
-    </button>
-  </nav>
+  <header>
+    <nav class="toggle-nav">
+      <img src="./assets/images/logo.svg" alt="logo" class="icon-img"/>
+      <button class="toggle-button" id="toggleBtn">
+        <img src="./assets/images/icon-sun.svg" alt="icon-sun" id="toggleImg" data-theme="light"/>
+      </button>
+    </nav>
+  </header>
 
-  <!-- Category Container -->
-  <main class="category-div">
-    <h1>Extensions List</h1>
-    <div class="category-list-div">
-      <button class="category-button active" id="allBtn">
-        ALL
-      </button>
-      <button class="category-button" id="activeBtn">
-        Active
-      </button>
-      <button class="category-button" id="inactiveBtn">
-        Inactive
-      </button>
-    </div>
+  <main>
+    <section class="category-div">
+      <h1>Extensions List</h1>
+      <div class="category-list-div">
+        <button class="category-button active" id="allBtn">ALL</button>
+        <button class="category-button" id="activeBtn">Active</button>
+        <button class="category-button" id="inactiveBtn">Inactive</button>
+      </div>
+    </section>
+
+    <section class="dynamic-lists" id="dynamicListDiv">
+      <!-- Dynamic List Items -->
+    </section>
   </main>
 
-  <!-- Dynamic List Container -->
-  <div class="dynamic-lists" id="dynamicListDiv">
-    <!-- Dynamic List Item -->
-  </div>
-
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Musa Thanmay Sadguru</a>.
-  </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
+
 </html>
