@@ -40,9 +40,11 @@
 }
 
 .container-dark {
-    background-color: black;
+    background-image: linear-gradient(to bottom,#050a1d,#09153d);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
-    max-height: 100vh;
+    min-height: 100vh;
     position: relative;
     padding: 5% 10%;
     font-family: "NotoSans";
