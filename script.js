@@ -39,54 +39,24 @@ function renderList(filteredData) {
     filteredData.forEach(item => {
         const itemDiv = document.createElement("div");
         itemDiv.classList.add("item-div");
-
-        const itemInnerTopDiv = document.createElement("div");
-        const itemTextDiv = document.createElement("div");
-        const itemInnerBottomDiv=document.createElement("div");
-
-        const headingEl = document.createElement("h3");
-        headingEl.textContent = item.name;
-
-        const descriptionEl = document.createElement("p");
-        descriptionEl.textContent = item.description;
-
-        const imageEl = document.createElement("img");
-        imageEl.src = item.logo;
-        imageEl.alt = item.name;
-
-        const removeBtn=document.createElement("button");
-        removeBtn.textContent="Remove";
-        removeBtn.classList.add("remove-btn")
-
-        const labelEl=document.createElement("label");
-        labelEl.classList.add("switch");
-
-        const inputEl=document.createElement("input");
-        inputEl.type="checkbox"
-
-        const spanEl=document.createElement("span");
-        if (item.isActive){
-            spanEl.classList.add("slider-active");
-        }
-        else{
-            spanEl.classList.add("slider-inactive")
-        }
-        spanEl.classList.add("round");
-
-        labelEl.appendChild(inputEl);
-        labelEl.appendChild(spanEl);
-
-        itemTextDiv.classList.add("item-text-div");  
-        itemInnerTopDiv.classList.add("item-inner-top-div");
-        itemInnerBottomDiv.classList.add("item-inner-bottom-div");
-        itemTextDiv.appendChild(headingEl);
-        itemTextDiv.appendChild(descriptionEl);
-        itemInnerTopDiv.appendChild(imageEl);
-        itemInnerTopDiv.appendChild(itemTextDiv);
-        itemInnerBottomDiv.appendChild(removeBtn);
-        itemInnerBottomDiv.appendChild(labelEl);
-        itemDiv.appendChild(itemInnerTopDiv);
-        itemDiv.appendChild(itemInnerBottomDiv);
+        itemDiv.innerHTML=`
+            <div class="item-inner-top-div">
+                <img src=${item.logo} alt=${item.name} />
+                <div class="item-text-div">
+                    <h2>${item.name}</h2>
+                    <p>${item.description}</p>
+                </div>
+            </div>
+            <div class="item-inner-bottom-div">
+                <button class="remove-btn" type="button">
+                    Remove
+                </button>
+                <label class="switch">
+                    <input type="checkbox"/>
+                    <span class="${item.isActive?"slider-active":"slider-inactive"} round"></span>
+                </label>
+            </div>
+        `;
         parentDiv.appendChild(itemDiv);
     });
 
